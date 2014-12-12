@@ -89,10 +89,10 @@ module LanguagePack
       opts
     end
 
-    #def tweak_jetty_port
-    #  port=ENV['PORT']
-    #  run_with_err_output("perl -pi -e 's/jetty.port=8080/jetty.port=$port/' #{jetty_dir}/start.ini")
-    #end
+    def tweak_jetty_port
+     port=ENV['PORT']
+     run_with_err_output("perl -pi -e 's/jetty.port=8080/jetty.port=$port/' #{jetty_dir}/start.ini")
+    end
 
     def default_process_types
       {
